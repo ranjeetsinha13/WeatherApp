@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/location_info"
+            style="@style/textHeading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/weather_info_title" />
+
+        <TextView
+            android:id="@+id/latitude_info"
+            style="@style/textHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location_info"
+            android:layout_alignParentStart="true"
+            android:text="@string/latitude" />
+
+        <TextView
+            android:id="@+id/longitude_info"
+            style="@style/textHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/latitude_info"
+            android:text="@string/longitude" />
+
+        <TextView
+            android:id="@+id/timezone_info"
+            style="@style/textHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/longitude_info"
+            android:layout_centerHorizontal="true"
+            android:text="@string/timezone" />
+
+        <HorizontalScrollView
+            android:id="@+id/weather_summary_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timezone_info"
+            android:layout_margin="@dimen/layout_margin"
+            android:background="@drawable/background_border"
+            android:fadeScrollbars="false"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/current_time"
+                    style="@style/textBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/weather_summary"
+                    style="@style/textBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/temperature"
+                    style="@style/textBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/precipitation"
+                    style="@style/textBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/hourly_weather"
+            style="@style/textHeading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_summary_report"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:text="@string/hourly_weather_report" />
+
+        <TextView
+            android:id="@+id/weather_summary_hourly"
+            style="@style/textBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hourly_weather" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hourly_weather_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_summary_hourly" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/error_layout"
+        style="@style/CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/layout_margin"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

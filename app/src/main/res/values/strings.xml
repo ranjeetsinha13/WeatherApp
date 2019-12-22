@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="permission_location_rationale">Location permission is needed to show the Weather for your location</string>
+    <string name="ok">OK</string>
+    <string name="permission_not_granted">Location permission is denied</string>
+    <string name="enable_location_settings">You need to enable location settings.Do you want to do it ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="location_settting_title">Location Settings</string>
+    <string name="internet_error">Please check your internet conenction</string>
+    <string name="weather_info_title">Showing Weather Information for:</string>
+    <string name="latitude">Latitude: %1$s</string>
+    <string name="longitude">Longitude: %1$s</string>
+    <string name="timezone">TimeZone: %1$s</string>
+    <string name="current_time">Date: %1$s</string>
+    <string name="weather_summary">Summary: %1$s</string>
+    <string name="temperature">Temperature (in F) %1$s</string>
+    <string name="precipitation">Precipitation Probability: %1$s</string>
+    <string name="hourly_weather_report">Hourly Weather Report</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="error_message"> Data cannot be loaded due to %1$s</string>
+</resources>
